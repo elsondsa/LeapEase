@@ -14,6 +14,7 @@ import LoadingSpin from "react-loading-spin";
 
 import configs from '../../configs';
 import useStyles from './styles';
+import { element } from "prop-types";
 
 const Home = () => {
   const classes = useStyles();
@@ -36,7 +37,7 @@ const Home = () => {
   const [file, setFile] = useState('');
   const [severity, setSeverity] = useState('success');
   const [execution, setExecution] = useState(false);
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -102,18 +103,12 @@ const Home = () => {
       let inputSequenceArray = state.inputSequence.split(",");
       let output = '';
       setLoading(true);
-      setResponse("");
+      setResponse([]);
       for (var i = 0; i < inputSequenceArray.length; i++) {
         const isNewRequest = i === 0 ? 1 : 0;
         var resp = await axios.get(`${config.base_url}/${config.leap_app}?MSISDN=${config.MSISDN}&isNewRequest=${isNewRequest}&subscriberInput=${inputSequenceArray[i]}`);
         await new Promise(resolve => setTimeout(resolve, 1000));
-        if (output == '') {
-          output = resp.data;
-        }
-        else {
-          output = output + "\n\n" + resp.data;
-        }
-        setResponse(output);
+        setResponse((prevResponses) => [...prevResponses, resp.data]);
         if (resp.headers.freeflow == "FB") {
           break;
         }
@@ -236,24 +231,34 @@ const Home = () => {
           </Collapse>
           <br />
           <br />
-          {loading ? (
-            <div>
-              <Collapse in={execution}>
-                <div style={{ whiteSpace: 'pre-wrap' }} className={classes.component}>
-                  {response}
-                </div>
-              </Collapse>
-              <Collapse style={{ padding: '10px' }} in={execution}>
-                <LoadingSpin height="5px" width="100px" />
-              </Collapse>
-            </div>
-          ) : (
-            <Collapse in={execution}>
-              <div style={{ whiteSpace: 'pre-wrap' }} className={classes.component}>
-                {response}
+          <div className={classes.parentContainer}>
+            {response.map((element, i) => (
+              <div key={i}>
+                <Collapse in={execution}>
+                  <div style={{ whiteSpace: 'pre-wrap' }} className={classes.mobileScreen}>
+                    <div className={classes.screenHeader}>USSD Response</div>
+                    {element}
+                    {i < response.length - 1 ? (
+                      <div className={classes.inputField}>
+                        <div className={classes.text}>
+                          {state.inputSequence.split(",")[i + 1]}
+                        </div>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
+                  </div>
+                </Collapse>
               </div>
-            </Collapse>
-          )}
+            ))}
+            {loading ? (
+              <Collapse style={{ padding: '10px' }} in={execution}>
+                <LoadingSpin height="5px" width="5px" />
+              </Collapse>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </div>

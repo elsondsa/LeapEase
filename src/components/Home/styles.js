@@ -41,4 +41,42 @@ export default makeStyles((theme) => ({
   image: {
     marginLeft: '15px',
   },
+  mobileScreen: {
+    border: '1px solid #ccc',
+    borderRadius: '20px',
+    padding: '20px',
+    width: '150px', // Adjust width as needed
+    height: '250px', // Adjust height as needed
+    backgroundColor: '#f5f5f5',
+    margin: 'auto',
+    position: 'relative', // Needed to position the input field absolutely within
+    boxShadow: '0px 0px 10px #aaa',
+    overflowY: 'auto', // Enable scrolling for overflow content
+    display: 'flex', // Changed to flex to better manage internal layout
+    flexDirection: 'column', // Stack children vertically
+  },
+  screenHeader: {
+    fontWeight: 'bold',
+    marginBottom: '10px'
+  },
+  responseContainer: {
+    whiteSpace: 'pre-wrap',
+  },
+  parentContainer: {
+    display: 'flex',
+    flexDirection: 'row', // Align children in a row
+    flexWrap: 'wrap', // Allow items to wrap to next line if not enough space
+    gap: '10px', // Space between children
+  },
+  inputField: {
+    position: 'absolute', // Position input field absolutely within mobileScreen
+    bottom: '20px', // Distance from the bottom of mobileScreen
+    left: '20px', // Align with the padding of mobileScreen
+    right: '20px', // Ensure consistent padding on the right
+    width: 'auto', // Adjust width to fit within mobileScreen's padding
+    border: '1px solid black', // Add a black border to the input field
+  },
+  text: {
+    padding: '5px'
+  }
 }));
