@@ -1,0 +1,146 @@
+[
+  {
+    "flowName": "agentChangePin",
+    "inputSequence": "0,8,1,1,5555,1235,1235"
+  },
+  {
+    "flowName": "agentAddSecurityQuestions",
+    "inputSequence": "0,8,1,3,1,1235"
+  },
+  {
+    "flowName": "agentViewSecurityQuestions",
+    "inputSequence": "0,8,1,3,2,1235"
+  },
+  { "flowName": "agentSecurityLearnMore", "inputSequence": "0,8,1,3,4" },
+  {
+    "flowName": "agentMyProfileLastFiveTransactions",
+    "inputSequence": "0,8,4,1,1235"
+  },
+  {
+    "flowName": "agentMyProfileTransactionStatus",
+    "inputSequence": "0,8,4,2,APCNG01638430833242,1235"
+  },
+  {
+    "flowName": "agentMyProfilePreviousDaySummary",
+    "inputSequence": "0,8,4,4,1235"
+  },
+  {
+    "flowName": "agentMyProfileTodaysSummary",
+    "inputSequence": "0,8,4,3,1235"
+  },
+  { "flowName": "agentMyBalance", "inputSequence": "0,7,1235" },
+  {
+    "flowName": "agentCashInToAccount",
+    "inputSequence": "0,2,1,1234568270,100,1235"
+  },
+  {
+    "flowName": "agentCashInToWallet",
+    "inputSequence": "0,2,1,2328730484,100,1235"
+  },
+  {
+    "flowName": "agentPostpaid",
+    "inputSequence": "0,3,1,1,8028852866,1,2,120,1,1235"
+  },
+  {
+    "flowName": "agentAirtime",
+    "inputSequence": "0,4,1,1,8122603558,100,1235"
+  },
+  {
+    "flowName": "agentBundle",
+    "inputSequence": "0,4,2,1,8122603558,1,6,3,1,1235"
+  },
+  {
+    "flowName": "agentTransfersOtherBank",
+    "inputSequence": "0,2,2,2,1,0051762787,100,5555"
+  },
+  {
+    "flowName": "customerMyProfileLastFiveTransactions",
+    "inputSequence": "0,10,3,1,1,1235"
+  },
+  {
+    "flowName": "customerMyProfileTransactionStatus",
+    "inputSequence": "0,10,3,1,2,APCNG01638430833242,1235"
+  },
+  {
+    "flowName": "customerMyProfilePreviousDaySummary",
+    "inputSequence": "0,10,3,1,3,1235"
+  },
+  {
+    "flowName": "customerChangePin",
+    "inputSequence": "0,10,1,1,5555,1235,1235"
+  },
+  {
+    "flowName": "customerMyProfileTodaysSummary",
+    "inputSequence": "0,10,3,1,4,1235"
+  },
+  { "flowName": "customerMyProfileHelpline", "inputSequence": "0,10,8" },
+  { "flowName": "customerAddMoneyCashDeposit", "inputSequence": "0,1,1" },
+  {
+    "flowName": "customerAddMoneyFriend",
+    "inputSequence": "0,1,3,9028896299,1,100,1235"
+  },
+  { "flowName": "customerMyBalance", "inputSequence": "0,2,5555" },
+  {
+    "flowName": "customerTransfersSmartcashWalletToAccount",
+    "inputSequence": "0,4,1,0000001313,200,5555,2"
+  },
+  {
+    "flowName": "customerTransfersSmartcashAccountToAccount",
+    "inputSequence": "0,4,2,1,1234568270,100,1235,2"
+  },
+  {
+    "flowName": "customerTransfersSmartcashWalletToWallet",
+    "inputSequence": "0,4,1,2328730484,100,5555"
+  },
+  {
+    "flowName": "customerTransfersSmartcashAccountToWallet",
+    "inputSequence": "0,4,2,1,2328730484,100,5555,2"
+  },
+  {
+    "flowName": "customerAirtimeForOthers",
+    "inputSequence": "0,3,1,1,2,8122603558,1,100,5555,1,hello"
+  },
+  {
+    "flowName": "customerAirtimeForSelf",
+    "inputSequence": "0,3,1,1,1,100,7777"
+  },
+  {
+    "flowName": "customerBundlesForSelf",
+    "inputSequence": "0,3,2,1,1,6,3,5555,1,meraBundle"
+  },
+  {
+    "flowName": "customerBundlesForOthers",
+    "inputSequence": "0,3,1,2,2,8122603558,1,6,3,5555"
+  },
+  { "flowName": "customerWithdrawCash", "inputSequence": "0,5,1,100,5555" },
+  {
+    "flowName": "agentWithdrawCash",
+    "inputSequence": "0,1,738728,1234,1235"
+  },
+  {
+    "flowName": "customerPayBillsPostpaid",
+    "inputSequence": "0,6,1,8028852866,1,2,100,5555"
+  },
+  {
+    "flowName": "customerPayBillsPostpaidFullPayment",
+    "inputSequence": "0,6,1,1,8028852866,1,1,1235"
+  },
+  {
+    "flowName": "customerProfileSecurityLearnMore",
+    "inputSequence": "0,8,1,3,4"
+  },
+  { "flowName": "customerProfilePinLearnMore", "inputSequence": "0,8,1,4" },
+  {
+    "flowName": "customerOtherBanks",
+    "inputSequence": "0,4,2,2,1,0051762787,100,5555,1,bankV2"
+  },
+  {
+    "flowName": "customerPayBillsElectricity",
+    "inputSequence": "0,6,1,7,10,07080259851,100,5555"
+  },
+  {
+    "flowName": "upgradeWallet",
+    "inputSequence": "0,8,2,2,5555,2,1,22293149178,79421972578,sita,85"
+  },
+  { "flowName": "sampleTestFlow", "inputSequence": "0,3,1,1,m" }
+]
