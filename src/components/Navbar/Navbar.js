@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
-import { Link, useHistory, useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import decode from 'jwt-decode';
+import React, { useState, useEffect } from "react";
+import { AppBar, Typography, Toolbar, Avatar, Button } from "@material-ui/core";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import decode from "jwt-decode";
 
-import memories from '../../images/Capture.PNG';
-import * as actionType from '../../constants/actionTypes';
-import useStyles from './styles';
+import memories from "../../images/Capture.PNG";
+import * as actionType from "../../constants/actionTypes";
+import useStyles from "./styles";
 
 const Navbar = () => {
   const classes = useStyles();
@@ -15,12 +15,52 @@ const Navbar = () => {
       <div className={classes.brandContainer}>
         {/* <Typography component={Link} to="/" className={classes.heading} variant="h5" align="center">LEAP AD Tools</Typography> */}
         <img className={classes.image} src={memories} alt="icon" height="50" />
-        <Typography style={{ fontFamily: 'Comic Sans MS' }}>One stop solution for LEAP APP Development</Typography>
+        <Typography style={{ marginLeft:"15px",fontSize: "30px",fontFamily: "Nunito Sans" }}>
+        EasyDevTest Innovators Hub
+        </Typography>
       </div>
       <Toolbar className={classes.toolbar}>
-        <Button style={{ right: 4 }} component={Link} to="/designGuidelines" variant="contained" color="primary">Design </Button>
-        <Button style={{ right: 4 }} component={Link} to="/requestFramer" variant="contained" color="primary">Request Framer</Button>
-        <Button style={{ right: 4 }} component={Link} to="/codeEditor" variant="contained" color="primary">Code Editor</Button>
+        <Button
+          style={{
+            right: 10,
+            color: "white",
+            backgroundColor: "rgb(237, 28, 36)",
+            borderRadius: "30px",
+          }}
+          component={Link}
+          to="/designGuidelines"
+          variant="contained"
+          color="primary"
+        >
+          Design{" "}
+        </Button>
+        <Button
+          style={{
+            right: 5,
+            color: "white",
+            backgroundColor: "rgb(237, 28, 36)",
+            borderRadius: "30px",
+          }}
+          component={Link}
+          to="/requestFramer"
+          variant="contained"
+          color="primary"
+        >
+          Request Framer
+        </Button>
+        <Button
+          style={{
+            color: "white",
+            backgroundColor: "rgb(237, 28, 36)",
+            borderRadius: "30px",
+          }}
+          component={Link}
+          to="/codeEditor"
+          variant="contained"
+          color="primary"
+        >
+          Code Editor
+        </Button>
       </Toolbar>
     </AppBar>
   );

@@ -46,14 +46,16 @@ export default makeStyles((theme) => ({
     borderRadius: '20px',
     padding: '20px',
     width: '150px', // Adjust width as needed
-    height: '250px', // Adjust height as needed
+    height: '200px', // Adjust height as needed
     backgroundColor: '#f5f5f5',
     margin: 'auto',
     position: 'relative', // Needed to position the input field absolutely within
-    boxShadow: '0px 0px 10px #aaa',
+    // boxShadow: '0px 0px 10px #aaa',
     overflowY: 'auto', // Enable scrolling for overflow content
     display: 'flex', // Changed to flex to better manage internal layout
     flexDirection: 'column', // Stack children vertically
+    fontFamily: "Nunito Sans, sans-serif",
+    fontSize:"14px"
   },
   screenHeader: {
     fontWeight: 'bold',
@@ -75,6 +77,7 @@ export default makeStyles((theme) => ({
     right: '20px', // Ensure consistent padding on the right
     width: 'auto', // Adjust width to fit within mobileScreen's padding
     border: '1px solid black', // Add a black border to the input field
+    borderRadius:"10px"
   },
   text: {
     padding: '5px'
